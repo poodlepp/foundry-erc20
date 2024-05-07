@@ -37,7 +37,7 @@ ifeq ($(findstring --network sepolia,$(ARGS)),--network sepolia)
 endif
 
 deploy:
-	@forge script script/***
+	@forge script script/DeployOurToken.s.sol:DeployOurToken ${NETWORK_ARGS}
 
-verify:
-	@forge verify-contract --chain-id 11155111 --num-of-optimizations 200 --watch --constructor-args  ***
+# verify:
+# 	@forge verify-contract --chain-id 11155111 --num-of-optimizations 200 --watch --constructor-args  ***
